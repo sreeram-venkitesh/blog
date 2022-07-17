@@ -1,7 +1,8 @@
 <% if user_signed_in? %>
- <div> Welcome <%= current_user.email %> </div>
-  <%= link_to "Sign out", destroy_user_session_path, data: { "turbo-method": :delete } %>
+  <script type="text/javascript">
+	window.location.href="/notes"
+  </script>
 <% else %>
   <%= link_to "Sign in", new_user_session_path %>
+  <p>Hello DigitalOcean!</p>
 <% end %>
-<p>Hello DigitalOcean!</p>
